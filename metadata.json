@@ -1,0 +1,16 @@
+{
+  "name": "gearboxscott-anacron",
+  "version": "1.0.13",
+  "author": "Scott Parker",
+  "summary": "This module will help create anacron entries to schedule programs, scripts, etc. on Linux systems that support anacron.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/gearboxscott/gearboxscott-anacron",
+  "project_page": "https://github.com/gearboxscott/gearboxscott-anacron",
+  "issues_url": "https://github.com/gearboxscott/gearboxscott-anacron",
+  "dependencies": [
+    {
+      "name": "gearboxscottlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}

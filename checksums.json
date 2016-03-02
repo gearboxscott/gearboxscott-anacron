@@ -1,0 +1,19 @@
+{
+  "LICENSE.md": "d32239bcb673463ab874e80d47fae504",
+  "README.md": "a51da140e06be883910f019f5fc4e5da",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "manifests/daily.pp": "405ebf5d9383dce71d901d4113347368",
+  "manifests/hourly.pp": "84de07790a4dfa7d8c5c20a5bd655595",
+  "manifests/init.pp": "20a88f70927c63a9e477a84e29cf2cd8",
+  "manifests/install.pp": "78c3c40f01c301695b0590a200566021",
+  "manifests/job.pp": "34bc6b25a7c8399040143a085ae6f91f",
+  "manifests/jobs.pp": "247e367449e1c409f807fe622c7b137e",
+  "manifests/monthly.pp": "e2257fd3e4444116aa040cf725026ab6",
+  "manifests/schedule.pp": "05ec8e6db2363080a609996008286a90",
+  "manifests/weekly.pp": "7b996b8c7ad7a404366e34c1989b56db",
+  "metadata.json": "bd4445520957c59a2de8594f72031c37",
+  "spec/classes/init_spec.rb": "49624608956bbe925a0dc317f82d4d8d",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "templates/job.erb": "d4558ccd4d69010d0997789c4fd9d6e9",
+  "tests/init.pp": "97b8275defd2e94dcc1d9249e93d05b2"
+}
