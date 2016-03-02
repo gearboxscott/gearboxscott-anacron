@@ -13,7 +13,7 @@
 #   This class should not be used directly under normal circumstances
 #   Instead, use the *cron* class.
 
-class cron::install {
+class anacron::install {
 
   $package_name = $::operatingsystem ? {
     /(RedHat|CentOS|OracleLinux|Amazon)/ => 'cronie',
