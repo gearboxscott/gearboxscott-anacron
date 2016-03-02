@@ -7,7 +7,7 @@
   "source": "https://github.com/gearboxscott/gearboxscott-anacron",
   "project_page": "https://github.com/gearboxscott/gearboxscott-anacron",
   "issues_url": "https://github.com/gearboxscott/gearboxscott-anacron",
-  "tags": [ "anacron", "cron",
+  "tags": [ "anacron", "cron" ],
   "operatingsystem_support": [
     {
     "operatingsystem":"RedHat",
