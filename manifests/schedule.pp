@@ -10,7 +10,7 @@ define anacron::schedule (
  
   case $anacron_schedule {
     /^(hourly|daily|weekly|monthly)$/: { }
-    default: { fail( 'CUSTOM ERROR: Invalid cron_schedule, use hourly, daily, weekly or monthly' ) }
+    default: { fail( 'CUSTOM ERROR: Invalid anacron_schedule, use hourly, daily, weekly or monthly' ) }
   }
 
   if $ensure == 'present' {

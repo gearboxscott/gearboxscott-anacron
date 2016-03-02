@@ -1,12 +1,12 @@
-class cron::weekly (
-  $cron_weekly = {},
+class anacron::weekly (
+  $anacron_weekly = {},
 ) {
 
-  validate_hash( $cron_weekly )
+  validate_hash( $anacron_weekly )
 
   $defaults = {
-    'cron_schedule' => 'weekly',
+    'anacron_schedule' => 'weekly',
   }
 
-  create_resources( cron::schedule, $cron_weekly, $defaults )
+  create_resources( anacron::schedule, $anacron_weekly, $defaults )
 }

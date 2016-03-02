@@ -1,12 +1,12 @@
-class cron::monthly (
-  $cron_monthly = {},
+class anacron::monthly (
+  $anacron_monthly = {},
 ) {
 
-  validate_hash( $cron_monthly )
+  validate_hash( $anacron_monthly )
   
   $defaults = {
-    'cron_schedule' => 'monthly',
+    'anacron_schedule' => 'monthly',
   }
 
-  create_resources( cron::schedule, $cron_monthly, $defaults )
+  create_resources( anacron::schedule, $anacron_monthly, $defaults )
 }
