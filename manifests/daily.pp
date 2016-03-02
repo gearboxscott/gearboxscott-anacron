@@ -1,5 +1,5 @@
-class anaanacron::daily (
-  $anaanacron_daily = {},
+class anacron::daily (
+  $anacron_daily = {},
 ) {
 
   validate_hash( $anacron_daily )
