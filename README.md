@@ -1,4 +1,4 @@
-# puppet-anacron
+# gearboxscott-anacron
 
 # Description:
 
@@ -8,9 +8,9 @@ This module will help create anacron entries to schedule programs, scripts, etc.
 
 Anacron was originally put in place for workstations and servers that were not constantly powered on.  Anacron on servers that are powered on permanently can be a powerful scheduling resource.  It can reduce the number crontab entries and makes it easier to find scheduled programs and script because schedule is file based not entry based.  
 
-# About puppet-anacron 
+# About gearboxscott-anacron 
 
-puppet-anacron will manage anacron.  It will manage entries in: 
+gearboxscott-anacron will manage anacron.  It will manage entries in: 
 
 * /etc/cron.d 
 
@@ -22,7 +22,7 @@ or files in directories:
 * /etc/cron.yearly
 
 
-puppet-anacron supports smart-parameters for Foreman and hiera.
+gearboxscott-anacron supports smart-parameters for Foreman and hiera.
 
 
 ##Usage:
