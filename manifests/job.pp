@@ -1,4 +1,4 @@
-define cron::job (
+define anacron::job (
   $filename = $title,
   $ensure = 'present',
   $command = '',
@@ -24,7 +24,7 @@ define cron::job (
       group   => 'root',
       mode    => '0644',
       path    => "/etc/cron.d/${filename}",
-      content => template( 'cron/job.erb' );
+      content => template( 'anacron/job.erb' );
     }
   }
 }

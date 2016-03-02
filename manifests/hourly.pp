@@ -1,12 +1,12 @@
-class cron::hourly (
-  $cron_hourly = {},
+class anacron::hourly (
+  $anacron_hourly = {},
 ) {
 
-  validate_hash( $cron_hourly )
+  validate_hash( $anacron_hourly )
 
   $defaults = {
-    'cron_schedule' => 'hourly',
+    'anacron_schedule' => 'hourly',
   }
 
-  create_resources( cron::schedule, $cron_hourly, $defaults )
+  create_resources( anacron::schedule, $anacron_hourly, $defaults )
 }

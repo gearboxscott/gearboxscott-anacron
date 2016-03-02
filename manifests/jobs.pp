@@ -1,7 +1,7 @@
-class cron::jobs (
-  $cron_jobs = {},
+class anacron::jobs (
+  $anacron_jobs = {},
 ) {
-  validate_hash( $cron_jobs )
+  validate_hash( $anacron_jobs )
 
-  create_resources( cron::job, $cron_jobs )
+  create_resources( anacron::job, $anacron_jobs )
 }

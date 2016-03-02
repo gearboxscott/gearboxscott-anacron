@@ -1,14 +1,14 @@
-define cron::schedule (
+define anacron::schedule (
   $filename = $title,
   $ensure = 'present',
   $type = '',
   $script = '',
-  $cron_schedule = '',
+  $anacron_schedule = '',
 ) {
 
   include stdlib
  
-  case $cron_schedule {
+  case $anacron_schedule {
     /^(hourly|daily|weekly|monthly)$/: { }
     default: { fail( 'CUSTOM ERROR: Invalid cron_schedule, use hourly, daily, weekly or monthly' ) }
   }
@@ -16,13 +16,13 @@ define cron::schedule (
   if $ensure == 'present' {
     case $type {
       'link': {
-        file { "/etc/cron.${cron_schedule}/${filename}":
+        file { "/etc/cron.${anacron_schedule}/${filename}":
           ensure  => link,
           target  => "${script}",
         }
       }
       'file': { 
-        file { "/etc/cron.${cron_schedule}/${filename}":
+        file { "/etc/cron.${anacron_schedule}/${filename}":
           ensure  => present,
           owner   => 'root',
           group   => 'root',
@@ -32,7 +32,7 @@ define cron::schedule (
       }
       'template': { 
         $template = $script
-        file { "/etc/cron.${cron_schedule}/${title}":
+        file { "/etc/cron.${anacron_schedule}/${title}":
           ensure  => present,
           owner   => 'root',
           group   => 'root',
@@ -40,7 +40,7 @@ define cron::schedule (
           content => template($template),
         }
       }
-      default: { fail( 'CUSTOM ERROR: file type unknown, use file,link or template' ) }
+      default: { fail( 'CUSTOM ERROR: file type unknown, use file, link or template' ) }
     }
   }
   else {

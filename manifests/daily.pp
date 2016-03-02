@@ -1,13 +1,13 @@
-class cron::daily (
-  $cron_daily = {},
+class anaanacron::daily (
+  $anaanacron_daily = {},
 ) {
 
-  validate_hash( $cron_daily )
+  validate_hash( $anacron_daily )
 
   $defaults = {
-    'cron_schedule' => 'daily',
+    'anacron_schedule' => 'daily',
   }
 
-  create_resources( cron::schedule, $cron_daily, $defaults )
+  create_resources( anacron::schedule, $anacron_daily, $defaults )
 }
 

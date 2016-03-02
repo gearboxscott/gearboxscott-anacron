@@ -1,6 +1,6 @@
-# Class: cron
+# Class: anacron
 
-class cron (
+class anacron (
   $jobs = {},
   $hourly = {},
   $daily = {},
@@ -14,26 +14,26 @@ class cron (
   validate_hash($weekly)
   validate_hash($monthly)
 
-  class { 'cron::install': }
+  class { 'anacron::install': }
 
-  class { 'cron::jobs': 
-    cron_jobs => $jobs,
+  class { 'anacron::jobs': 
+    anacron_jobs => $jobs,
   }
 
-  class { 'cron::hourly': 
-    cron_hourly => $hourly,
+  class { 'anacron::hourly': 
+    anacron_hourly => $hourly,
   }
 
-  class { 'cron::daily': 
-    cron_daily => $daily,
+  class { 'anacron::daily': 
+    anacron_daily => $daily,
   }
 
-  class { 'cron::weekly': 
-    cron_weekly => $weekly,
+  class { 'anacron::weekly': 
+    anacron_weekly => $weekly,
   }
 
-  class { 'cron::monthly': 
-    cron_monthly => $monthly,
+  class { 'anacron::monthly': 
+    anacron_monthly => $monthly,
   }
 
 }
