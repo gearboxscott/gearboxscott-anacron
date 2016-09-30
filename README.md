@@ -47,10 +47,33 @@ Values:
 * 	weekday: day number of the week, 0-7 or names (0 or 7 is Sunday, or use names) (default: '*')
 * 	hour: 0-23 (default: '*')
 * 	minute: 0-59 (default: '*')
+
+## /var/lib/puppet/templates/job.erb content:
+
+```ruby
+###########################################################################################
+### This file is managed by puppet, and is refreshed regularly. Edit at your own peril! ###
+###########################################################################################
+## <%= @name %> Cron Job
+#
+# Environment Settings
+<% Array(@environment).join("\n").split(%r{\n}).each do |env_var|
+if env_var.match(%r{\S+=\S+}) -%>
+<%= env_var %>
+<%   elsif env_var.match(%r{\S}) -%>
+## Possible input error: <%= env_var %>
+<%   end
+end -%>
+
+# Job Definition
+<%= @minute %> <%= @hour %> <%= @date %> <%= @month %> <%= @weekday %>  <%= @user %>  <%= @command %>
+```
 	
 Example 1 - rsync's the templates to another puppet master every 30 minutes.  A file named rsync_templates will be created in /etc/cron.d/ and will have the following contents:
 
 	*/30 * * * * foreman rsync -av -e ssh /var/lib/puppet/templates root@somepuppetmaster
+	
+The master template is called job.erb found in the /etc/puppet/environment/your_environment/modules/ana, copy the template into /var/lib/pupppet/templates.  The templates directory might need to be created with mkdir /var/lib/puppet/templates.
 	
 Here is the hash:
 
